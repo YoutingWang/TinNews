@@ -50,7 +50,7 @@ public class SearchNewsAdapter extends RecyclerView.Adapter<SearchNewsAdapter.Se
         //TODO : delete when image url come back;
         holder.title.setText(article.title);
 
-        if (article.urlToImage == null) {
+        if (article.urlToImage == null || article.urlToImage.isEmpty()) {
             holder.newsImage.setImageResource(R.drawable.ic_empty_image);
         } else {
             Picasso.get().load(article.urlToImage).into(holder.newsImage);
